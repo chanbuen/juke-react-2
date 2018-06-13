@@ -8,6 +8,7 @@ import Sidebar from './Sidebar';
 import Player from './Player';
 import NewPlaylist from './NewPlaylist';
 import axios from 'axios'
+import Playlist from './Playlist';
 
 export default class Main extends Component {
   constructor(){
@@ -50,6 +51,7 @@ export default class Main extends Component {
           </div>
           <div className="col-xs-10">
             <Switch>
+              <Route path="/playlist/:playlistId" component={Playlist}/>
               <Route path="/new-playlist" render={() => <NewPlaylist handleSubmit={this.handleSubmit} handleChange={this.handleChange} input={this.state.input}/>} />
               <Route exact path="/albums" component={StatefulAlbums} />
               <Route path="/albums/:albumId" component={SingleAlbum} />
