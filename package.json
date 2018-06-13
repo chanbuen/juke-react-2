@@ -4,7 +4,7 @@
   "description": "A generated project at Fullstack Academy",
   "main": "server/main.js",
   "scripts": {
-    "start": "node server/main.js",
+    "start": "nodemon server/main.js",
     "test": "./node_modules/.bin/mocha server/**/*.test.js --reporter spec",
     "test:player": "node_modules/.bin/testem",
     "seed": "node ./bin/seed",
@@ -32,6 +32,7 @@
     "pg-native": "^1.10.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-router-dom": "^4.3.1",
     "request": "^2.74.0",
     "sequelize": "^4.4.0",
     "serve-favicon": "^2.2.0",

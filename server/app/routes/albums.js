@@ -28,12 +28,9 @@ router.param('albumId', function (req, res, next, id) {
   .catch(next);
 });
 
+
 router.get('/:albumId', function (req, res) {
   res.json(req.album);
-});
-
-router.get('/:albumId/image', function (req, res, next) {
-  res.redirect(`/api/songs/${req.album.songs[0].id}/image`)
 });
 
 router.get('/:albumId/songs/', function (req, res) {
